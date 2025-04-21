@@ -5,6 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
 import { clsx } from "clsx";
+import { Sidebar } from "lucide-react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -45,7 +46,9 @@ export default function RootLayout({
                 {/* container for the content centered */}
                 <div className="max-w-7xl mx-auto px-4">
                   <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-                    <div className="hidden lg:block md:col-span-3">sidbar</div>
+                    <div className="hidden lg:block md:col-span-3">
+                      <Sidebar/>
+                    </div>
                     <div className="lg:col-span-9">{children}</div>
                   </div>
                 </div>
